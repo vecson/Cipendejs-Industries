@@ -114,7 +114,7 @@ body.dark-theme {
   overflow: hidden;
 }
 .header__img {
-  background-image: url("../img/world-population.jpg");
+  background-image: url("../img/header.jpg");
   background-size: cover;
   opacity: 0.2;
 }
