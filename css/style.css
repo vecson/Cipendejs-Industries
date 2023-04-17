@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.6rem;
+}
+body.dark-theme {
+  color: #fff;
+  background: #060922;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 1em;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  background-color: #fff;
+  z-index: 500;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  border-bottom: 1px solid #53535a;
+  z-index: 10;
+}
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+}
+.navbar__logo a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: bold;
+  min-height: 3rem;
+}
+.navbar__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 100%;
+  height: calc(100vh - 80px);
+  transform: translateX(100%);
+  background-color: #fff;
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+  overflow: auto;
+}
+.navbar .show-menu {
+  transform: translateX(0);
+  opacity: 1;
+  background-color: transparent;
+  overflow: inherit;
+}
+.navbar__item {
+  display: inline-block;
+  margin-top: 1.5em;
+  font-size: 2rem;
+  list-style: none;
+}
+.navbar__item a {
+  padding: 1em 2em;
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.navbar__item--active a, .navbar__item a:hover {
+  color: #09aff4;
+}
+
+.overlay-photo-image-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  display: block;
+  transition: all 0.5s ease-in-out 0s;
+}
+
+.particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.header {
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.header__img {
+  background-image: url("../img/world-population.jpg");
+  background-size: cover;
+  opacity: 0.2;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 0 1em;
+  }
+}
+@media (min-width: 992px) {
+  .navbar__list {
+    flex-direction: row;
+    justify-content: space-between;
+    position: static;
+    min-height: 8rem;
+    height: 0;
+    width: auto;
+    transform: translateX(0);
+    opacity: 1;
+    background: transparent;
+    overflow: hidden;
+  }
+  .navbar__logo a {
+    min-height: 4rem;
+  }
+  .navbar__item {
+    margin-top: 0;
+    font-size: 1.8rem;
+  }
+  .navbar__item a {
+    padding: 1em;
+  }
+  .navbar__burger-btn {
+    display: none;
+  }
+}/*# sourceMappingURL=style.css.map */
