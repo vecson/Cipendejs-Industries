@@ -13,11 +13,17 @@ body {
   font-family: "Poppins", sans-serif;
   font-size: 1.6rem;
 }
-body.dark-theme {
-  color: #fff;
+
+.dark-theme {
+  color: white;
   background: #060922;
 }
 
+@keyframes moving-bg {
+  0% {
+    transform: translateY(15%);
+  }
+}
 .wrapper {
   margin: 0 auto;
   padding: 0 1em;
@@ -26,7 +32,7 @@ body.dark-theme {
 }
 
 .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  background-color: #fff;
+  background-color: white;
   z-index: 500;
 }
 
@@ -46,7 +52,7 @@ body.dark-theme {
 }
 .navbar__logo a {
   text-decoration: none;
-  color: #fff;
+  color: white;
   font-size: 2.4rem;
   font-weight: bold;
   min-height: 3rem;
@@ -70,7 +76,6 @@ body.dark-theme {
   transform: translateX(0);
   opacity: 1;
   background-color: transparent;
-  overflow: inherit;
 }
 .navbar__item {
   display: inline-block;
@@ -80,7 +85,7 @@ body.dark-theme {
 }
 .navbar__item a {
   padding: 1em 2em;
-  color: #fff;
+  color: white;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -116,6 +121,8 @@ body.dark-theme {
 .header__img {
   background-image: url("../img/header.jpg");
   background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   opacity: 0.2;
 }
 

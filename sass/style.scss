@@ -14,12 +14,21 @@ html {
 body {
 	font-family: 'Poppins', sans-serif;
 	font-size: 1.6rem;
+	
+}
 
-	&.dark-theme {
-		color: $white;
-		background: $dark-blue;
+.dark-theme {
+	color: $white;
+	background: $dark-blue;
+}
+
+// KEYFRAMES
+@keyframes moving-bg {
+	0% {
+		transform: translateY(15%);
 	}
 }
+// KEYFRAMES END
 
 // WRAPPER
 
@@ -52,14 +61,14 @@ body {
 	background-color: transparent;
 	border-bottom: 1px solid #53535a;
 	z-index: 10;
-
+	
 	&__nav {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		height: 80px;
 	}
-
+	
 	&__logo a {
 		text-decoration: none;
 		color: $white;
@@ -67,7 +76,7 @@ body {
 		font-weight: bold;
 		min-height: 3rem;
 	}
-
+	
 	&__list {
 		display: flex;
 		flex-direction: column;
@@ -83,28 +92,28 @@ body {
 		transition: transform 0.5s, opacity 0.5s;
 		overflow: auto;
 	}
-
+	
 	.show-menu {
 		transform: translateX(0);
 		opacity: 1;
 		background-color: transparent;
-		overflow: inherit;
 	}
 
+	
 	&__item {
 		display: inline-block;
 		margin-top: 1.5em;
 		font-size: 2rem;
 		list-style: none;
 	}
-
+	
 	&__item a {
 		padding: 1em 2em;
 		color: $white;
 		text-decoration: none;
 		transition: color 0.3s;
 	}
-
+	
 	&__item--active a,
 	&__item a:hover {
 		color: $main;
@@ -145,10 +154,12 @@ body {
 	height: 100vh;
 	position: relative;
 	overflow: hidden;
-
+	
 	&__img {
 		background-image: url('../img/header.jpg');
 		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
 		opacity: 0.2;
 	}
 }
